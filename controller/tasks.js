@@ -5,11 +5,11 @@ const getAllTasks = (req, res) => {
 }
 
 const createNewTask = (req, res) => {
-  res.send('create new task')
+  res.json(req.body)
 
 }
 const getTask = (req, res) => {
-  res.send('get single task')
+  res.json({ id: req.params.id })
 
 }
 const updateTask = (req, res) => {
