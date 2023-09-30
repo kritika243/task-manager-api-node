@@ -2,7 +2,16 @@ const mongoose = require('mongoose')
 
 
 const TaskSChema = new mongoose.Schema({
-  name: String, completed: Boolean
+  name: {
+    type: String,
+    required: [true, 'name is required'],
+    trim: true,
+    maxlength: [20, 'name can not be more than 20 chars']
+  },
+  completed: {
+    type: Boolean,
+    default: false
+  }
 })
 
 
