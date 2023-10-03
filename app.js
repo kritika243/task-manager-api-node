@@ -6,6 +6,7 @@ const connectDB = require('./db/connect')
 
 
 // middleware
+app.use(express.static('./public'))
 app.use(express.json())
 
 app.use('/api/v1/tasks', taskRoutes)
